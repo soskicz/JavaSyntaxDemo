@@ -4,11 +4,11 @@ public class JavaSyntaxDemo {
 
     public static void main(String[] args)
     {
-        // using strings
-        // demoString();
-
         // using Wrappers
         // demoWrap();
+
+        // using strings
+        //demoString();
 
         // using NULL
         // String s = null;
@@ -26,7 +26,7 @@ public class JavaSyntaxDemo {
         // demoBinaryLogic();
 
         // using assignment operators
-        // demoAssignment();
+        demoAssignment();
 
         // using incrementation operators
         //demoIncrementation();
@@ -81,11 +81,12 @@ public class JavaSyntaxDemo {
         System.out.println(a / b);
         System.out.println(a % b);
 
-        double c = 5, d = 2;
+        double c = 5.4, d = 2;
         System.out.println(c + d);
         System.out.println(c - d);
         System.out.println(c * d);
         System.out.println(c / d);
+        System.out.println(c % d);
     }
 
     static void demoCompare()
@@ -102,6 +103,8 @@ public class JavaSyntaxDemo {
         System.out.println("2 >= 3 :" + res);
         res = 2 != 3;
         System.out.println("2 != 3 :" + res);
+        res = 2 == 3;
+        System.out.println("2 == 3 :" + res);
     }
 
     static void demoLogic()
@@ -118,7 +121,7 @@ public class JavaSyntaxDemo {
         System.out.println(" (2<3) && (2>3) :" + res);
 
         res = a || b; // a OR b
-        System.out.println(" (2<3) && (2>3) :" + res);
+        System.out.println(" (2<3) || (2>3) :" + res);
     }
 
     static void demoBinaryLogic()
