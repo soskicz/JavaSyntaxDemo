@@ -35,30 +35,6 @@ public class JavaSyntaxDemo {
         // demoConcatenation();
     }
 
-    static void demoString()
-    {
-        // String
-        String s;
-
-        System.out.print("Enter the string \"String example\":");
-        Scanner scanner = new Scanner(System.in);
-
-        s = scanner.nextLine();
-
-        System.out.println(s.equals("string example"));
-        System.out.println(s.equalsIgnoreCase("string example"));
-        System.out.println(s.toLowerCase());
-        System.out.println(s.toUpperCase());
-        System.out.println(s.substring(7));
-        System.out.println(s.substring(0, 6));
-
-        String[] part = s.split(" ");
-        System.out.println(part[0]);
-
-        String n = s.replace('i', 'o');
-        System.out.println(n);
-    }
-
     static void demoWrap()
     {
         String s;
