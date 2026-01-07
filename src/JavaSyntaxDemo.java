@@ -4,12 +4,6 @@ public class JavaSyntaxDemo {
 
     public static void main(String[] args)
     {
-        // using Wrappers
-        // demoWrap();
-
-        // using strings
-        //demoString();
-
         // using NULL
         // String s = null;
 
@@ -33,19 +27,6 @@ public class JavaSyntaxDemo {
 
         // using incrementation operators
         // demoConcatenation();
-    }
-
-    static void demoWrap()
-    {
-        String s;
-
-        s = "12";
-        int x = Integer.parseInt(s);
-        System.out.println(x);
-
-        s = "12.21";
-        double y = Double.parseDouble(s);
-        System.out.println(y);
     }
 
     static void demoArithmetic()
