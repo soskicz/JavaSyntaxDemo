@@ -1,3 +1,5 @@
+import java.util.function.Function;
+
 public class demoOperators {
 
     static void main() {
@@ -31,7 +33,13 @@ public class demoOperators {
         // demoConcatenation();
 
         // using ternary operator
-        demoTernary();
+        // demoTernary();
+
+        // new and instanceof operators
+        // demoNewInstanceOf();
+
+        // access operators
+        demoAccess();
     }
 
     static void demoArithmetic() {
@@ -149,5 +157,30 @@ public class demoOperators {
         int x = 2, y = 3;
         int max = (x > y) ? x : y;
         System.out.println(" Bigger of " + x + " and " + y + " is " + max + ".");
+    }
+
+    static void demoNewInstanceOf() {
+        Circle c;
+        c = new Circle();
+        boolean result = c instanceof Circle;
+        System.out.println(c);
+        System.out.println(result);
+    }
+
+    static void demoAccess() {
+        Circle[] cArray = new Circle[3];
+        cArray[0] = new Circle(1,0xFF0000);
+        cArray[1] = new Circle(1,0x00FF00);
+        cArray[2] = new Circle(1,0x0000FF);
+
+        Circle c = cArray[0];
+        System.out.println(c);
+
+        double c_radius;
+        c_radius = c.radius;
+        System.out.println(c_radius);
+
+        final Function<Circle, Double> funCalculateArea = Circle::calculateArea;
+        System.out.println(funCalculateArea);
     }
 }
