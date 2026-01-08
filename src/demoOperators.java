@@ -1,11 +1,13 @@
-import java.util.Scanner;
+public class demoOperators {
 
-public class JavaSyntaxDemo {
+    static void main() {
 
-    public static void main(String[] args)
-    {
-        // using NULL
-        // String s = null;
+        // double a, b, middle, sum;
+        // a = 2; b = 3;
+        // sum = a+b;
+        // middle = (a+b)/2;
+        // System.out.println( sum );
+        // System.out.println( a+b );
 
         // using arithmetic operators
         // demoArithmetic();
@@ -17,20 +19,22 @@ public class JavaSyntaxDemo {
         // demoLogic();
 
         // using binary logical operators
-        // demoBinaryLogic();
+        // demoBitwiseLogic();
 
         // using assignment operators
-        demoAssignment();
+        // demoAssignment();
 
         // using incrementation operators
-        //demoIncrementation();
+        // demoIncrementation();
 
         // using incrementation operators
         // demoConcatenation();
+
+        // using ternary operator
+        demoTernary();
     }
 
-    static void demoArithmetic()
-    {
+    static void demoArithmetic() {
         int a = 5, b = 2;
         System.out.println(a + b);
         System.out.println(a - b);
@@ -46,8 +50,7 @@ public class JavaSyntaxDemo {
         System.out.println(c % d);
     }
 
-    static void demoCompare()
-    {
+    static void demoCompare() {
         boolean res;
 
         res = 2 < 3;
@@ -64,9 +67,8 @@ public class JavaSyntaxDemo {
         System.out.println("2 == 3 :" + res);
     }
 
-    static void demoLogic()
-    {
-        boolean res, a , b;
+    static void demoLogic() {
+        boolean res, a, b;
 
         a = 2 < 3;
         b = 2 > 3;
@@ -81,9 +83,8 @@ public class JavaSyntaxDemo {
         System.out.println(" (2<3) || (2>3) :" + res);
     }
 
-    static void demoBinaryLogic()
-    {
-        byte a , b;
+    static void demoBitwiseLogic() {
+        byte a, b;
         int res;
 
         a = 0x05; // 0000 0101
@@ -99,9 +100,8 @@ public class JavaSyntaxDemo {
         System.out.println(" (0000 0101) | (0000 100) :" + res);
     }
 
-    static void demoAssignment()
-    {
-        int x;
+    static void demoAssignment() {
+        int x, y, z;
 
         x = 4;
         System.out.println(" x = 4 x: " + x);
@@ -115,29 +115,39 @@ public class JavaSyntaxDemo {
         System.out.println(" x /= 2 x: " + x);
         x %= 2; // x = x % 2
         System.out.println(" x %= 2 x: " + x);
+
+        z = y = x + 2; // y = x + 2; z = y;
+        System.out.println(" x:" + x);
+        System.out.println(" y:" + y);
+        System.out.println(" z:" + z);
     }
 
-    static void demoIncrementation()
-    {
+    static void demoIncrementation() {
         int x = 10;
         int y = x++; // y = x; x = x + 1;
         int z = ++x; // x = x + 1;  z = x;
 
-        System.out.println("x: " + x + " y: " + y + " z: " + z );
+        System.out.println(" x: " + x + " y: " + y + " z: " + z);
 
         // demo for logic truncation: calculation of conjunction stops once an operand with false is found
         boolean res = (x < 10) && (x++ > 10); // res = false && who cares?
         // x++ is never executed because the first operand is false and evaluation of expression is truncated
-        System.out.println("x: " + x);
+        System.out.println(" x: " + x);
     }
 
-    static void demoConcatenation()
-    {
+    static void demoConcatenation() {
         String fname = "Novak", lname = "Djokovic";
         System.out.println(fname + " " + lname);
 
-        int a = 5, b = 2; String s = "x";
+        int a = 5, b = 2;
+        String s = "x";
         System.out.println(a + b + s); // "7x"
         System.out.println(s + a + b); // "x52"
+    }
+
+    static void demoTernary() {
+        int x = 2, y = 3;
+        int max = (x > y) ? x : y;
+        System.out.println(" Bigger of " + x + " and " + y + " is " + max + ".");
     }
 }
