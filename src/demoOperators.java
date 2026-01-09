@@ -39,7 +39,7 @@ public class demoOperators {
         // demoNewInstanceOf();
 
         // access operators
-        demoAccess();
+        // demoAccess();
     }
 
     static void demoArithmetic() {
