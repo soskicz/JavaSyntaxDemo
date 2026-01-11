@@ -83,6 +83,6 @@ public class demoIO {
         int x = Integer.parseInt(console.readLine("Enter an integer: "));
         double d = Double.parseDouble(console.readLine("Enter a double: "));
         String line = console.readLine("Enter a line: ");
-        System.out.println(line);
+        console.printf("%d\n%f\n%s\n",x,d,line);
     }
 }
