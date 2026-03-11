@@ -20,7 +20,7 @@ public class Circle {
      */
     Circle() {
         this.radius = 0.0;
-        this.color = 0x000000;
+        this.color = 0xFFFFFF;
     }
 
     /**
@@ -46,11 +46,11 @@ public class Circle {
     /**
      * Setter for color of a circle
      *
-     * @param c new color for the existing circle
+     * @param colorToSet new color for the existing circle
      */
-    void setColor(int c) {
-        this.color = c;
-    }
+    void setColor(int colorToSet)    { this.color = colorToSet; }
+    void setColor(long colorToSet)   { this.color = (int) colorToSet; }
+    void setColor(double colorToSet) { this.color = (int) colorToSet; }
 
     /**
      * Getter for radius of a circle
